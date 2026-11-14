@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: "Archivo", system-ui, sans-serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-serif: "Source Serif 4", Georgia, serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-editorial {
+    font-family: var(--font-serif);
+  }
+
+  .font-mono-num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Architectural travertine monograph texture */
+.editorial-canvas {
+  background-color: #E7DFD0;
+  background-image:
+    radial-gradient(rgba(13, 14, 20, 0.065) 1px, transparent 1px),
+    linear-gradient(to right, rgba(13, 14, 20, 0.035) 1px, transparent 1px);
+  background-size: 26px 26px, 104px 104px;
+}
+
+.dark .editorial-canvas {
+  background-color: #050507;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 26px 26px, 104px 104px;
+}
+
+/* Tactile risograph & screenprint halftone dot overlay inspired by Basel/Pop-art prints */
+.halftone-screen {
+  background-image: radial-gradient(rgba(13, 14, 20, 0.42) 1.15px, transparent 1.15px);
+  background-size: 5px 5px;
+}
+
+.halftone-screen-light {
+  background-image: radial-gradient(rgba(245, 242, 235, 0.25) 1px, transparent 1px);
+  background-size: 5px 5px;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
