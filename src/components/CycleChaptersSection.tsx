@@ -2,7 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { ProjectArtwork } from './ProjectArtwork';
-import { ArtworkVariant } from '../data/portfolioData';
+import {
+  ArtworkVariant,
+  DJINE_IMAGE,
+  HERO_IMAGE,
+  LIKABO_IMAGE,
+} from '../data/portfolioData';
 
 interface CycleChapter {
   number: string;
@@ -40,7 +45,7 @@ const CYCLE_CHAPTERS: CycleChapter[] = [
       "Traduire des architectures Microsoft Azure, de la gouvernance FinOps ou de la chasse de têtes C-Level en prises de parole LinkedIn lisibles. Construire une crédibilité continue entre l'Afrique francophone et l'Europe.",
     projectsLabel: 'Likabo (MSP Microsoft) · Djine Care (RH)',
     targetAnchor: '#projets',
-    image: '/src/assets/images/project_likabo_bridge_1794644818593.jpg',
+    image: LIKABO_IMAGE,
     variant: 'orbits',
   },
   {
@@ -53,7 +58,7 @@ const CYCLE_CHAPTERS: CycleChapter[] = [
       "Porter la voix d'ETSIA — le Salon Technologique et Stratégique d'Informatique en Afrique à l'Institut UCAC-ICAM — sur Instagram : vulgariser l'Agritech, l'IA éthique et la cybersécurité PME pour faire salle comble.",
     projectsLabel: 'ETSIA · Conférence technologique UCAC-ICAM',
     targetAnchor: '#projets',
-    image: '/src/assets/images/hero_editorial_atelier_1794644818966.jpg',
+    image: HERO_IMAGE,
     variant: 'grid',
   },
   {
@@ -66,7 +71,7 @@ const CYCLE_CHAPTERS: CycleChapter[] = [
       "Avec GLITCH Magazine et le Journal Substack, ouvrir un espace éditorial libre autour du système, du corps, de la machine et de l'esprit — là où l'esthétique graphique sert la sincérité du texte.",
     projectsLabel: 'GLITCH Magazine Vol. 01 & 02 · Journal',
     targetAnchor: '#glitch',
-    image: '/src/assets/images/project_djine_editorial_1794644819942.jpg',
+    image: DJINE_IMAGE,
     variant: 'solar',
   },
 ];

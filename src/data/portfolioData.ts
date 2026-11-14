@@ -1,3 +1,7 @@
+import heroEditorialImg from '../assets/images/hero_editorial_atelier_1794644818966.jpg';
+import projectLikaboImg from '../assets/images/project_likabo_bridge_1794644818593.jpg';
+import projectDjineImg from '../assets/images/project_djine_editorial_1794644819942.jpg';
+
 export type Discipline =
   | 'Community management'
   | 'Design graphique'
@@ -85,7 +89,9 @@ export const STATUSES: Array<'Tous' | ProjectStatus> = [
   'Personnel',
 ];
 
-export const HERO_IMAGE = '/src/assets/images/hero_editorial_atelier_1794644818966.jpg';
+export const HERO_IMAGE = heroEditorialImg;
+export const LIKABO_IMAGE = projectLikaboImg;
+export const DJINE_IMAGE = projectDjineImg;
 
 export const HERO_CHAPTERS = [
   {
@@ -94,7 +100,7 @@ export const HERO_CHAPTERS = [
     title: 'Likabo, Djine Care & Linnov',
     caption:
       "Positionner des partenaires Microsoft, cabinets RH et structures tech entre Douala et Paris avec une voix éditoriale nette.",
-    image: '/src/assets/images/project_likabo_bridge_1794644818593.jpg',
+    image: projectLikaboImg,
   },
   {
     id: '02',
@@ -102,7 +108,7 @@ export const HERO_CHAPTERS = [
     title: 'Salon ETSIA · UCAC-ICAM',
     caption:
       "Couverture Instagram et mise en récit de la 1ʳᵉ édition à Akwa (Douala) autour de 6 axes numériques africains.",
-    image: '/src/assets/images/hero_editorial_atelier_1794644818966.jpg',
+    image: heroEditorialImg,
   },
   {
     id: '03',
@@ -110,7 +116,7 @@ export const HERO_CHAPTERS = [
     title: 'GLITCH Magazine Vol. 01 & 02',
     caption:
       '« Quand la confidence a besoin d’un prétexte. » Revue indépendante entre système, corps, machine et esprit.',
-    image: '/src/assets/images/project_djine_editorial_1794644819942.jpg',
+    image: projectDjineImg,
   },
 ];
 
@@ -125,7 +131,7 @@ export const PROJECTS: ProjectItem[] = [
     year: '2025 – 2026',
     summary:
       "Faire exister un MSP Microsoft (« Like a Business Owner ») sur LinkedIn, entre l'Afrique francophone et l'Europe.",
-    image: '/src/assets/images/project_likabo_bridge_1794644818593.jpg',
+    image: projectLikaboImg,
     artworkVariant: 'orbits',
     accentLabel: 'LinkedIn B2B & Microsoft MSP',
     context:
@@ -161,7 +167,7 @@ export const PROJECTS: ProjectItem[] = [
     year: '2025 – 2026',
     summary:
       'Plateforme digitale RH : le volet commercial, marketing et rayonnement LinkedIn.',
-    image: '/src/assets/images/project_djine_editorial_1794644819942.jpg',
+    image: projectDjineImg,
     artworkVariant: 'bauhaus',
     accentLabel: 'Marketing RH & Mobilité',
     context:
